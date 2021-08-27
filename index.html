@@ -1,6 +1,6 @@
 <html>
 <body>
-답변:
+    결과:
 </body>
 <script>
     function dateDiff(_date1, _date2) {
@@ -11,11 +11,11 @@
         diff = diff / (1000 * 3600 * 24);
         return diff;
     }
-    var a ='08-16-2021 00:00:00';
+    var a = new Date(2021, 8, 16, 0, 0, 0);
     var today = new Date();
-    var b = (today.getMonth() + 1) + "-" + (today.getDate()) + "-" + today.getFullYear() + " 00:00:00"
-    var dd = parseInt(dateDiff(new Date(a), new Date(b))) % 21;
-    // alert(dd)
+    var b = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), 0, 0, 0);
+    var dd = parseInt(dateDiff(a, b) % 21);
+    alert(dd)
     document.body.append(new Date(a) + ", ");
     document.body.append(new Date(b) + ", ");
     if (dd == 0) document.body.append("첫 야간 시작, 저녁 7시에 출근하는 날");
