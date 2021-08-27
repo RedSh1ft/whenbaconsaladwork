@@ -11,9 +11,9 @@
         diff = diff / (1000 * 3600 * 24);
         return diff;
     }
-    var a ='2021-08-16 00:00:00';
+    var a ='08-16-2021 00:00:00';
     var today = new Date();
-    var b = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate()) + " 00:00:00"
+    var b = (today.getMonth() + 1) + "-" + (today.getDate()) + "-" + today.getFullYear() + " 00:00:00"
     var dd = parseInt(dateDiff(new Date(a), new Date(b))) % 21;
     // alert(dd)
     document.body.append(new Date(a) + ", ");
