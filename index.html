@@ -1,13 +1,13 @@
 <html>
 <body>
-    결과:
+    return:
 </body>
 <script>
     function dateDiff(_date1, _date2) {
         var diff = _date2.getTime() - _date1.getTime();
-        document.body.append(_date2.getTime() + ", ");
-        document.body.append(_date1.getTime() + ", ");
-        document.body.append(diff + ", ");
+        //document.body.append(_date2.getTime() + ", ");
+        //document.body.append(_date1.getTime() + ", ");
+        //document.body.append(diff + ", ");
         diff = diff / (1000 * 3600 * 24);
         return diff;
     }
@@ -15,9 +15,9 @@
     var today = new Date();
     var b = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), 0, 0, 0);
     var dd = parseInt(dateDiff(a, b) % 21);
-    alert(dd)
-    document.body.append(new Date(a) + ", ");
-    document.body.append(new Date(b) + ", ");
+    //alert(dd)
+    //document.body.append(new Date(a) + ", ");
+    //document.body.append(new Date(b) + ", ");
     if (dd == 0) document.body.append("첫 야간 시작, 저녁 7시에 출근하는 날");
     else if (dd > 1 && dd <= 6) document.body.append("저녁 7시 출근해서 다음날 오전7시에 퇴근하는 날");
     else if (dd == 7) document.body.append("아침 7시에 퇴근하는 날");
