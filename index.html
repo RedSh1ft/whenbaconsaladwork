@@ -1,5 +1,6 @@
 <html>
 <body>
+답변: 
 </body>
 <script>
     function dateDiff(_date1, _date2) {
@@ -10,7 +11,7 @@
     var a ='2021-08-16 00:00:00';
     var today = new Date();
     var b = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + (today.getDate()) + " 00:00:00"
-    var dd = dateDiff(new Date(a), new Date(b)) % 21;
+    var dd = parseInt(dateDiff(new Date(a), new Date(b))) % 21;
     // alert(dd)
     if (dd == 0) document.body.append("첫 야간 시작, 저녁 7시에 출근하는 날");
     else if (dd > 1 && dd <= 6) document.body.append("저녁 7시 출근해서 다음날 오전7시에 퇴근하는 날");
@@ -23,5 +24,6 @@
     else if (dd == 16) document.body.append("아침 7시에 출근해서 오후 4시에 퇴근하는 날");
     else if (dd == 17 || dd == 18) document.body.append("야간 들어가기 전에 하루종일 쉬는날");
     else if (dd == 19 || dd == 20) document.body.append("아침 7시에 출근해서 오후 7시에 퇴근하는 날");
+    else document.body.append("대부분은 버그입니다.: " + dd);
 </script>
 </html>
